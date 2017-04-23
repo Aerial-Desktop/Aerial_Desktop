@@ -4,7 +4,7 @@
 
 ## Installation
 
-1. [Click here to Download](https://github.com/MichaelDimmitt/ScreenSaver_to_DesktopBackground_mac/archive/1.0.zip) or clone project down.
+1. [Click here to Download](https://github.com/MichaelDimmitt/ScreenSaver_to_DesktopBackground_mac/archive/v2.1.zip) or clone project down.
 2. Unzip the downloaded file.
 3. If trial_run skip to <b>step 6</b>.
 4. If want to <b>continue using app</b> past first implementation go to <b>step 5.</b>

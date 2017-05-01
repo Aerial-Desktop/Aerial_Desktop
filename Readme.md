@@ -2,24 +2,19 @@
 
 ## Screen Saver to Desktop Background on Startup
 
-## Installation
+## Installation (only on a Macintosh)
 
-1. [Click here to Download](https://github.com/MichaelDimmitt/ScreenSaver_to_DesktopBackground_mac/archive/v2.1.zip) or clone project down.
-2. Unzip the downloaded file.
-3. If trial_run skip to <b>step 6</b>.
-4. If want to <b>continue using app</b> past first implementation go to <b>step 5.</b>
-5. Move unzipped folder  to a location that you will not delete the program.
-6. First timers need to hold ctrl when they open.
-7. Open **DesktopBackgroundChanger.app** wait 2 minutes and confirm desktop background changes.
+1. clone down project.
+2. cd into project.
+3. run ./install_driver
+4. restart your computer or put computer to sleep to confirm loads at startup. 
 
-You will know the intended function is complete when the terminal window minimizes.
-If desktop background does not change. Send me an email. Or make an issue.
+## To Uninstall
 
-
-## Setting Application to run automatic at Startup
-
-1. Open System Preferences -> Users & Groups -> Login Items -> add item desktopBackground.app
-2. Restart your computer
+1. clone down project.
+2. cd into project.
+3. run ./uninstall_driver (this will stop launchctl and remove from ~/Library/LaunchAgents
+4. delete project
 
 ## Consider downloading Aerial Desktop
 

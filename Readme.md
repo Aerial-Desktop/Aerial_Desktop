@@ -1,20 +1,16 @@
 ![screencast](https://cloud.githubusercontent.com/assets/499192/10754100/c0e1cc4c-7c95-11e5-9d3b-842d3acc2fd5.gif)
 
-## Screen Saver to Desktop Background on Startup
+# Screen Saver to Desktop Background on Startup
 
-## Installation (only on a Macintosh)
+## What you need to know: (Programmer Version)
 
-1. clone down project.
-2. cd into project.
-3. run ./install_driver
-4. restart your computer or put computer to sleep to confirm loads at startup. 
-
-## To Uninstall
-
-1. clone down project.
-2. cd into project.
-3. run ./uninstall_driver (this will stop launchctl and remove from ~/Library/LaunchAgents
-4. delete project
+1) clone down project
+2) cd project<br>
+<pre><b>install and start</b></pre>
+3) rake install<br>
+<pre><b>uninstall and stop</b></pre>
+4) rake uninstall
+<hr>
 
 ## Consider downloading Aerial Desktop
 
@@ -22,7 +18,7 @@ If you want your desktop background<br>
 to be the screen saver shown at the beginning of the readme:
 
 
-Head over to: https://github.com/JohnCoates/Aerial and download that screensaver.<br>
+Head over to: https://github.com/JohnCoates/Aerial and download that screensaver.<br><hr>
 
 ## Note:
 

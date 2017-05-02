@@ -6,7 +6,7 @@
 	<string>com.example.hello</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>This is a test. If still here, navigate to repo and run ./install_driver.</string>
+		<string>This is a test. If still here, navigate to repo and run ./install_driver.	
 	</array>
 	<key>RunAtLoad</key>
 	<true/>

@@ -2,9 +2,8 @@
 
 # write out path needed
 pwd=$PWD
-pwd2="              <string>$pwd/app/./DesktopBackgroundChanger.app/Contents/MacOS/DesktopBackgroundChanger</string>"
+pwd2="              <string>$pwd/./app/DesktopBackgroundChanger.app/Contents/Resources/script</string>"
 echo $pwd2
-
 # insert path needed into correct file.
 # line 9 in com.example.hello.plist
 sed -i '' '9s?.*?'"$pwd2"'?' app/com.example.hello.plist

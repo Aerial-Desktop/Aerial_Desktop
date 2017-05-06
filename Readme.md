@@ -1,15 +1,18 @@
 ![screencast](https://cloud.githubusercontent.com/assets/499192/10754100/c0e1cc4c-7c95-11e5-9d3b-842d3acc2fd5.gif)
 
 # Screen Saver to Desktop Background on Startup
+Only for Macintosh Computers, enjoy. <br>
+If you can think of a better name please let me know. 
 
-## What you need to know: (Programmer Version)
+Completely open source so feel free to contribute to or learn from project development.
 
-1) clone down project
-2) cd project<br>
-<pre><b>install and start</b></pre>
-3) rake install<br>
-<pre><b>uninstall and stop</b></pre>
-4) rake uninstall
+## Installation (no programming experience needed)
+1) [Click here to Download](https://github.com/MichaelDimmitt/ScreenSaver_to_DesktopBackground_mac/archive/v3.0.zip)
+2) Unzip the downloaded file.
+3) Open **Installer.app** and confirm installation.
+note: after installing ... program runs at startup or waking from sleep.
+
+4) Open **Uninstall.app** to uninstall.
 <hr>
 
 ## Consider downloading Aerial Desktop
@@ -31,10 +34,15 @@ The screensaver engine takes your default screensaver to project as a desktop ba
 ## Contribute
 I appreciate all pull requests.
 
-When I wanted the desktop background <br>
-this was one of the windows to the solution.<br>
-http://www.techradar.com/how-to/computing/apple/easy-mac-hacks-set-screen-saver-as-desktop-background-1305622
+## Useful Links
 
+#### When I wanted the screensaver as a desktop background these were the windows to the solution.
 
-but needed to be a user friendly application installalable by all and packaged.
+<a href="http://www.techradar.com/how-to/computing/apple/easy-mac-hacks-set-screen-saver-as-desktop-background-1305622">techradar_article_By_MacLife_Set_Screen_Saver_as_Desktop_Background</a>
 
+#### When I wanted the change to happen when the computer woke from sleep:
+https://nathangrigg.com/2012/07/schedule-jobs-using-launchd
+https://github.com/MichaelDimmitt/mac_plist_launch_agent
+
+## License
+[MIT License](https://raw.githubusercontent.com/MichaelDimmitt/ScreenSaver_to_DesktopBackground_mac/master/LICENSE)

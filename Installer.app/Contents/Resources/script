@@ -1,1 +1,5 @@
+
+xattr -dr com.apple.quarantine "../../../app/download_aerial.sh"
+xattr -dr com.apple.quarantine "../../../bin/Aerial/Aerial.saver"
+./../../../app/download_aerial.sh
 ./../../../app/install_driver.sh

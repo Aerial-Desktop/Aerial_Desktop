@@ -7,21 +7,34 @@ If you can think of a better name please let me know.
 Completely open source so feel free to contribute to or learn from project development.
 
 ## Installation (no programming experience needed)
-1) [Click here to Download](https://github.com/MichaelDimmitt/ScreenSaver_to_DesktopBackground_mac/archive/v3.0.zip)
+
+1) [Click here to Download](https://github.com/MichaelDimmitt/ScreenSaver_to_DesktopBackground_mac/releases/download/v3.1/ScreenSaver_to_DesktopBackground_mac.zip)
 2) Unzip the downloaded file.
-3) Open **Installer.app** and confirm installation.
+3) hold "ctrl" and Open **Installer** and confirm installation.<br>
 note: after installing ... program runs at startup or waking from sleep.
 
-4) Open **Uninstall.app** to uninstall.
+## Setting Aerial as Your Screen Saver
+
+1. Open System Preferences -> Desktop & Screen Saver -> Screen Saver
+2. Choose Aerial and click on Screen Saver Options to select your settings.
+
+![Screenshot](https://cloud.githubusercontent.com/assets/499192/10754102/c58cc076-7c95-11e5-9579-4275740ba339.png)
+
+## Uninstallation
+
+* Open **Uninstall.app** to uninstall.
+* Right-click on the Aerial screen saver in System Preferences and select `Delete "Aerial"`.
+* Or delete the file(s) directly. macOS can store screen savers in two locations. `/Library/Screen Savers` and `/Users/YOURUSERNAME/Library/Screen Savers`. Check both locations for a file called "Aerial.saver" and delete any copies you find.
+
 <hr>
 
-## Consider downloading Aerial Desktop
+## Aerial Installed by default with project. 
 
-If you want your desktop background<br>
-to be the screen saver shown at the beginning of the readme:
+If you only want Aerial as a screensaver without the desktop change, simply open **Uninstall.app**<br>
+and you are done! The afterward uninstall steps are for removing the Aerial Screensaver.
 
-
-Head over to: https://github.com/JohnCoates/Aerial and download that screensaver.<br><hr>
+To find more information on Aerial navigate to: 
+https://github.com/JohnCoates/Aerial<br><hr>
 
 ## Note:
 

@@ -8,7 +8,7 @@ Completely open source so feel free to contribute to or learn from project devel
 
 ## Installation (no programming experience needed)
 
-1) [Click here to Download](https://github.com/MichaelDimmitt/ScreenSaver_to_DesktopBackground_mac/releases/download/v3.2/ScreenSaver_to_DesktopBackground_mac.zip)
+1) [Click here to Download](https://github.com/MichaelDimmitt/Aerial_Desktop/releases/download/v4.2/Aerial_Desktop.zip)
 2) Unzip the downloaded file.
 3) hold "ctrl" and Open **Installer** and confirm installation.<br>
 note: after installing ... program runs at startup or waking from sleep.

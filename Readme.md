@@ -11,9 +11,16 @@ Completely open source so feel free to contribute to or learn from project devel
 1) [Click here to Download](https://github.com/MichaelDimmitt/Aerial_Desktop/releases/download/v4.2/Aerial_Desktop.zip)
 2) Unzip the downloaded file.
 3) hold "ctrl" and Open **Installer** and confirm installation.<br>
-note: after installing ... program runs at startup or waking from sleep.
+<b>note:</b> after installing ... program runs at startup or waking from sleep.
 
-## Setting Aerial as Your Screen Saver
+## Installation (for inquisitive programmers.)
+
+1) git clone https://github.com/MichaelDimmitt/Aerial_Desktop.git;
+2) cd Aerial_Desktop;
+3) open Installer.app;<br>
+<b>note:</b> Uninstall with "open Uninstall.app"
+
+## Adjusting Aerial Settings
 
 1. Open System Preferences -> Desktop & Screen Saver -> Screen Saver
 2. Choose Aerial and click on Screen Saver Options to select your settings.

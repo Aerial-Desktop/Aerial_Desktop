@@ -1,10 +1,9 @@
 # !/bin/bash
 
+# write out path needed
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo $DIR
 
-# write out path needed
-# pwd=$PWD
 pwd2="              <string>$DIR/./DesktopBackgroundChanger.app/Contents/Resources/script</string>"
 echo $pwd2
 # insert path needed into correct file.

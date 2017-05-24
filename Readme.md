@@ -8,7 +8,7 @@ Completely open source so feel free to contribute to or learn from project devel
 
 ## Installation (no programming experience needed)
 
-1) [Click here to Download](https://github.com/MichaelDimmitt/Aerial_Desktop/releases/download/v4.2/Aerial_Desktop.zip)
+1) [Click here to Download](https://github.com/MichaelDimmitt/Aerial_Desktop/releases/download/5.0/Aerial_Desktop.zip)
 2) Unzip the downloaded file.
 3) hold "ctrl" and Open **Installer** and confirm installation.<br>
 <b>note:</b> after installing ... program runs at startup or waking from sleep.
@@ -19,6 +19,9 @@ Completely open source so feel free to contribute to or learn from project devel
 2) cd Aerial_Desktop;
 3) open Installer.app;<br>
 <b>note:</b> Uninstall with "open Uninstall.app"
+
+## Usage: 
+Setting the program as your Desktop Background can be toggled after installation with "Start.app and "Stop.app" ... implementing "Stop.app" will leave "Aerial" as your default screensaver. This app can support other Screensavers as Backgrounds. If you would like that email me at michaelgdimmitt@gmail.com or open an issue.
 
 ## Adjusting Aerial Settings
 

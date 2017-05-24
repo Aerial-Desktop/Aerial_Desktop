@@ -1,3 +1,7 @@
 ./../../../app/download_aerial.sh
 ./../../../app/local_install_workaround.sh
 ./../../../app/install_launch_agent.sh
+mv ../../../app/Start.app/     ../../../
+mv ../../../app/Stop.app/      ../../../
+mv ../../../app/Uninstall.app  ../../../
+mv ../../../Installer.app      ../../../app

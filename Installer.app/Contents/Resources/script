@@ -1,7 +1,7 @@
-./../../../app/download_aerial.sh
-./../../../app/local_install_workaround.sh
-./../../../app/install_launch_agent.sh
-mv ../../../app/Start.app/     ../../../
-mv ../../../app/Stop.app/      ../../../
-mv ../../../app/Uninstall.app  ../../../
-mv ../../../Installer.app      ../../../app
+./../../../.hide/app/install/1_download_aerial.sh
+./../../../.hide/app/install/2_local_install_workaround.sh
+./../../../.hide/app/install/3_install_launch_agent.sh
+mv ../../../.hide/bin/Start.app/     ../../../
+mv ../../../.hide/bin/Stop.app/      ../../../
+mv ../../../.hide/bin/Uninstall.app  ../../../
+mv ../../../Installer.app      ../../../.hide/bin

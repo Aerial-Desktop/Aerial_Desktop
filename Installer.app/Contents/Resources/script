@@ -1,4 +1,12 @@
 ./../../../.hide/app/install/1_download_aerial.sh
+TIMEOUT=5
+#change this to a while
+  until [ -d ~/Library/Screen\ Savers/Aerial.saver ] || [ -d /Library/Screen\ Savers/Aerial.saver ] || [ $TIMEOUT -eq 0 ] ; do
+    osascript -e 'display notification "To allow for Decision/User Credentials" with title "Application Waiting"'
+    sleep 5
+    TIMEOUT=$[$TIMEOUT-1]
+    # say $TIMEOUT
+  done
 ./../../../.hide/app/install/2_local_install_workaround.sh
 ./../../../.hide/app/install/3_install_launch_agent.sh
 mv ../../../.hide/bin/Start.app/     ../../../

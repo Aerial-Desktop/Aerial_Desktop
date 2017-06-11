@@ -7,7 +7,4 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
     echo "File exists."
   else
     open $DIR/../../bin/Aerial.saver/
-    sleep 5
-    osascript -e 'display notification "To allow for User decision/credentials" with title "Application Waiting ten seconds"'
-    sleep 5
   fi

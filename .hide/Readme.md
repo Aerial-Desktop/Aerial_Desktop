@@ -70,4 +70,4 @@ https://nathangrigg.com/2012/07/schedule-jobs-using-launchd
 https://github.com/MichaelDimmitt/mac_plist_launch_agent
 
 ## License
-[MIT License](https://raw.githubusercontent.com/MichaelDimmitt/ScreenSaver_to_DesktopBackground_mac/master/LICENSE)
+[MIT License](https://raw.githubusercontent.com/MichaelDimmitt/ScreenSaver_to_DesktopBackground_mac/master/.LICENSE)

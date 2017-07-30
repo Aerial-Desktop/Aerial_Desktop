@@ -1,0 +1,2 @@
+#!/bin/bash
+./.hide/app/uninstall/unstage_launch_agent.sh

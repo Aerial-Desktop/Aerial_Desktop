@@ -1,0 +1,3 @@
+#!/bin/bash
+./.hide/app/install/2_local_install_workaround.sh
+./.hide/app/install/3_install_launch_agent.sh

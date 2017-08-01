@@ -3,7 +3,8 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # run aerial application
-  if [ -d ~/Library/Screen\ Savers/Aerial.saver ] || [ -d /Library/Screen\ Savers/Aerial.saver ] ; then
+aerial_saver="/Library/Screen\ Savers/Aerial.saver"
+  if [ -d ~$aerial_saver ] || [ -d $aerial_saver ] ; then
     echo "File exists."
   else
     open $DIR/../../bin/Aerial.saver/

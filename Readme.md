@@ -6,6 +6,7 @@ If you can think of a better name please let me know.
 
 Completely open source so feel free to contribute to or learn from project development.
 
+#### Most stable when installing for current user instead of across all users.
 ## Installation (no programming experience needed)
 
 1) [Click here to Download](https://github.com/MichaelDimmitt/Aerial_Desktop/releases/download/v7.1/Aerial_Desktop.zip)
@@ -27,8 +28,9 @@ Setting the program as your Desktop Background can be toggled after installation
 
 1. Open System Preferences -> Desktop & Screen Saver -> Screen Saver
 2. Choose Aerial and click on Screen Saver Options to select your settings.
+3. Location Labels not installed by default, check "Show Label for Location" in Screen Saver Options.
 
-![Screenshot](https://cloud.githubusercontent.com/assets/499192/10754102/c58cc076-7c95-11e5-9579-4275740ba339.png)
+![screen saver options](https://user-images.githubusercontent.com/11463275/28892748-f6b50d30-779c-11e7-9c28-56b5727e0aa4.png)
 
 ## Uninstallation
 

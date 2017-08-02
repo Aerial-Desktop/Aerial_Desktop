@@ -6,7 +6,7 @@
 	<string>com.example.hello</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>This is a test. Check if the file has been exists or has been modified in /.tmp/com.example.plist. If not, navigate to repo and run ./install_launch_agent.	
+		<string>This is a test. Check if the file has been exists or has been modified in /.tmp/com.example.plist. If not, navigate to repo and run ./install_launch_agent.
 	</array>
 	<key>RunAtLoad</key>
 	<true/>

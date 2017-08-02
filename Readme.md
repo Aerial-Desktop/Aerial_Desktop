@@ -18,8 +18,8 @@ Completely open source so feel free to contribute to or learn from project devel
 
 1) git clone https://github.com/MichaelDimmitt/Aerial_Desktop.git;
 2) cd Aerial_Desktop;
-3) open Installer.app;<br>
-<b>note:</b> Uninstall with "open Uninstall.app"
+3) ruby .hide/bin/Installer;<br>
+<b>note:</b> Uninstall with "ruby .hide/bin/Uninstall"
 
 ## Usage: 
 Setting the program as your Desktop Background can be toggled after installation with "Start.app and "Stop.app" ... implementing "Stop.app" will leave "Aerial" as your default screensaver. This app can support other Screensavers as Backgrounds. If you would like that email me at michaelgdimmitt@gmail.com or open an issue.

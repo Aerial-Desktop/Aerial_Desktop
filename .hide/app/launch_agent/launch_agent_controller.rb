@@ -1,8 +1,10 @@
-# !/bin/bash
+# require relative screensaver_engine.rb
+# require relative com.example.plist
+# require relative .tmp
 
 # write out path needed
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-LA=$DIR/../launch_agent
+`DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+LA=$DIR
 SE=$DIR/../../bin
 
 echo $DIR
@@ -24,4 +26,4 @@ chmod 644 $LA/.tmp/com.example.hello.plist
 
 cp $LA/.tmp/com.example.hello.plist ~/Library/LaunchAgents/
 
-launchctl load ~/Library/LaunchAgents/com.example.hello.plist
+launchctl load ~/Library/LaunchAgents/com.example.hello.plist`

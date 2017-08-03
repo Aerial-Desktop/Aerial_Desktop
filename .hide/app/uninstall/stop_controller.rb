@@ -1,2 +1,2 @@
 #!/bin/bash
-./.hide/app/uninstall/unstage_launch_agent.sh
+./.hide/app/launch_agent/unstage_launch_agent.rb

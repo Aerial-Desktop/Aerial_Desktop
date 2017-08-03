@@ -9,7 +9,7 @@ TIMEOUT=25
     TIMEOUT=$[$TIMEOUT-1]
   done
 }
-./.hide/app/install/1_download_aerial.sh
+./.hide/app/screensaver/screensaver_controller.rb
 adaptive_wait
-./.hide/app/install/2_local_install_workaround.sh
-./.hide/app/install/3_install_launch_agent.sh
+./.hide/app/notification/notification_controller.rb
+./.hide/app/launch_agent/launch_agent_controller.rb

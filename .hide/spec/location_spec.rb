@@ -1,5 +1,5 @@
 require "rspec"
-require_relative '../install/install_controller.rb'
+require_relative '../app/install/install_controller.rb'
 
 describe InstallController do
   let(:install_controller) { InstallController.new }

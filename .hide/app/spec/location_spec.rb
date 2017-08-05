@@ -1,12 +1,12 @@
 require "rspec"
-require_relative ../install/install_controller.rb
+require_relative '../install/install_controller.rb'
 
-describe AerialTest do
+describe InstallController do
   let(:install_controller) { InstallController.new }
   describe "Locations_LaunchAgents" do
 
     it "installs screensavers to their correct locations" do
-      let(:SAVER_LOCATION) = { 'Library/LaunchAgents/' }
+      SAVER_LOCATION = 'Library/LaunchAgents'
       expect(install_controller.local_screensaver_exists SAVER_LOCATION, 'Aerial.saver').to eq( "~/Library/LaunchAgents/Aerial.saver")
       expect(install_controller.root_screensaver_exists  SAVER_LOCATION, 'Aerial.saver').to eq("/Library/LaunchAgents/Aerial.saver")
       expect(install_controller.local_screensaver_exists SAVER_LOCATION, 'Aerial.saver').not_to eq ("/Library/LaunchAgents/Aerial.saver")

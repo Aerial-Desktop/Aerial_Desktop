@@ -25,10 +25,10 @@ class InstallController
     "/#{SAVER_LOCATION}/#{saver_name}"
   end # test should send empty saver name or demo ... and match manually typed
 end
-SAVER_LOCATION = 'Library/LaunchAgents'
-install_controller = InstallController.new
-puts install_controller.local_screensaver_exists SAVER_LOCATION, 'Aerial.saver'
-puts install_controller.root_screensaver_exists  SAVER_LOCATION, 'Aerial.saver'
+# SAVER_LOCATION = 'Library/LaunchAgents'
+# install_controller = InstallController.new
+# puts install_controller.local_screensaver_exists SAVER_LOCATION, 'Aerial.saver'
+# puts install_controller.root_screensaver_exists  SAVER_LOCATION, 'Aerial.saver'
 
 
 

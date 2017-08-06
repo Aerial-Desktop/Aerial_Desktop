@@ -1,4 +1,4 @@
-
+#!/bin/bash
 adaptive_wait () {
 TIMEOUT=25
   until [ -d ~/Library/Screen\ Savers/Aerial.saver ] || [ -d /Library/Screen\ Savers/Aerial.saver ] || [ $TIMEOUT -eq 0 ] ; do
@@ -9,12 +9,7 @@ TIMEOUT=25
     TIMEOUT=$[$TIMEOUT-1]
   done
 }
-shrink=../../..
-./$shrink/.hide/app/install/1_download_aerial.sh
+./.hide/app/screensaver/screensaver_controller.sh
 adaptive_wait
-./$shrink/.hide/app/install/2_local_install_workaround.sh
-./$shrink/.hide/app/install/3_install_launch_agent.sh
-mv $shrink/.hide/bin/Start.app/     ../../../
-mv $shrink/.hide/bin/Stop.app/      ../../../
-mv $shrink/.hide/bin/Uninstall.app  ../../../
-mv $shrink/Installer.app      ../../../.hide/bin
+./.hide/app/notify/notification_controller.sh
+./.hide/app/launch_agent/launch_agent_controller.sh

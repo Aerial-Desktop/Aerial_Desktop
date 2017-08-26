@@ -20,3 +20,16 @@ else
   echo "nothing found"
 fi
 # end check battery to acceptance criteria.
+
+if [ "$result" == "Yes" ] ; then
+  echo Charging;
+elif [ "$result" == "No" ] ; then
+  echo Not Charging;
+  if (( $(echo "$percentage < $test" | bc -l) )) ; then
+    echo not charging and battery unacceptable level.
+  else
+    echo but at an acceptable battery level.
+  fi
+else 
+  echo something went wrong contact michael did some bad programming.
+fi

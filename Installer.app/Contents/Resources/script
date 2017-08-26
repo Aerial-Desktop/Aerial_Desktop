@@ -14,6 +14,7 @@ shrink=../../..
 adaptive_wait
 ./$shrink/.hide/app/install/2_local_install_workaround.sh
 ./$shrink/.hide/app/install/3_install_launch_agent.sh
+./$shrink/.hide/app/install/2_local_install_workaround.sh
 mv $shrink/.hide/bin/Start.app/     ../../../
 mv $shrink/.hide/bin/Stop.app/      ../../../
 mv $shrink/.hide/bin/Uninstall.app  ../../../

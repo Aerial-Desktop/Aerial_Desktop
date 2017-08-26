@@ -23,12 +23,15 @@ fi
 
 if [ "$result" == "Yes" ] ; then
   echo Charging;
+  osascript -e 'display notification "Since Computer is Charging, program ok." with title "Aerial Desktop"'
 elif [ "$result" == "No" ] ; then
   echo Not Charging;
   if (( $(echo "$percentage < $test" | bc -l) )) ; then
     echo not charging and battery unacceptable level.
+    osascript -e 'display notification "Computer not charging and low battery program disabled." with title "Aerial Desktop"'
   else
     echo but at an acceptable battery level.
+    osascript -e 'display notification "Computer not charging and but at an acceptable battery level, program ok." with title "Aerial Desktop"'
   fi
 else 
   echo something went wrong contact michael did some bad programming.

@@ -34,5 +34,5 @@ elif [ "$result" == "No" ] ; then
     osascript -e 'display notification "Computer not charging and but at an acceptable battery level, program ok." with title "Aerial Desktop"'
   fi
 else 
-  echo something went wrong contact michael did some bad programming.
+  osascript -e 'display notification " something went wrong, contact michael; did some bad programming." with title "Aerial Desktop"'
 fi

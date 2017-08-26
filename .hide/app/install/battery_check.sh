@@ -21,17 +21,26 @@ else
 fi
 # end check battery to acceptance criteria.
 
+# gather information to be able to run scripts from this file location.
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+# say $DIR
+# end gather information.
+
+# perform actions based on computer's charged state.
 if [ "$result" == "Yes" ] ; then
   echo Charging;
   osascript -e 'display notification "Since Computer is Charging, program ok." with title "Aerial Desktop"'
+  $DIR/./3_install_launch_agent.sh
 elif [ "$result" == "No" ] ; then
   echo Not Charging;
   if (( $(echo "$percentage < $test" | bc -l) )) ; then
     echo not charging and battery unacceptable level.
     osascript -e 'display notification "Computer not charging and low battery program disabled." with title "Aerial Desktop"'
+    $DIR/./../uninstall/unstage_aerial_desktop.sh
   else
     echo but at an acceptable battery level.
     osascript -e 'display notification "Computer not charging and but at an acceptable battery level, program ok." with title "Aerial Desktop"'
+    $DIR/./3_install_launch_agent.sh
   fi
 else 
   osascript -e 'display notification " something went wrong, contact michael; did some bad programming." with title "Aerial Desktop"'

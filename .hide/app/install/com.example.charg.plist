@@ -13,6 +13,6 @@
 	<key>SuccessfulExit</key>
 	<false/>
 	<key>StartInterval</key>
-	<integer>20</integer>
+	<integer>5</integer>
 </dict>
 </plist>

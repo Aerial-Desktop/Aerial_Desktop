@@ -3,27 +3,60 @@
 # require relative .tmp
 
 # write out path needed
-`DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-LA=$DIR
-SE=$DIR/../../bin
 
-echo $DIR
+def get_directory()
+  directory = File.dirname(__FILE__)
+end
 
+def get_launch_agent_directory(directory)
+  launch_agent = directory
+end
 
-#create .tmp file
-mkdir $LA/.tmp
-cp $LA/com.example.hello.plist $LA/.tmp/com.example.hello.plist
+def get_screensaver_engine_directory(directory)
+  screensaver_engine = "#{directory}/../../bin"
+end
 
-# create the string needed.
-pwd2="              <string>$SE/./screensaver_engine.app/Contents/Resources/script</string>"
-echo $pwd2
-# insert path needed into correct file.
-# line 9 in com.example.hello.plist
-sed -i '' '9s?.*?'"$pwd2"'?' $LA/.tmp/com.example.hello.plist
+def create_tmp_file(launch_agent_directory)
+  `mkdir #{launch_agent_directory}/.tmp`
+end
 
-# change environment appropriately
-chmod 644 $LA/.tmp/com.example.hello.plist
+def copy_launch_agent_to_tmp(launch_agent_directory)
+  `cp #{launch_agent_directory}/com.example.hello.plist #{launch_agent_directory}/.tmp/com.example.hello.plist`
+end
 
-cp $LA/.tmp/com.example.hello.plist ~/Library/LaunchAgents/
+def create_string_for_launch_agent(screensaver_engine)
+  # create the string needed.
+  change_line_str = "              <string>#{screensaver_engine}/./screensaver_engine.app/Contents/Resources/script</string>"
+end
 
-launchctl load ~/Library/LaunchAgents/com.example.hello.plist`
+def insert_path_needed_into_correct_file(change_line_str, launch_agent_directory)
+  # line 9 in com.example.hello.plist
+  `sed -i '' '9s?.*?''#{change_line_str}''?' "#{launch_agent_directory}/.tmp/com.example.hello.plist"`
+end
+
+def set_plist_permissions(launch_agent)
+  `chmod 644 "#{launch_agent}/.tmp/com.example.hello.plist"`
+end
+
+def stage_launch_agent(launch_agent)
+  `cp "#{launch_agent}/.tmp/com.example.hello.plist" ~/Library/LaunchAgents/`
+end
+
+def load_launch_agent
+  `launchctl load ~/Library/LaunchAgents/com.example.hello.plist`
+end
+
+def controller()
+  get_directory
+  launch_agent_directory = get_launch_agent_directory(get_directory())
+  get_screensaver_engine_directory(get_directory())
+  create_tmp_file(launch_agent_directory)
+  copy_launch_agent_to_tmp(launch_agent_directory)
+  change_line_str = create_string_for_launch_agent(get_screensaver_engine_directory(get_directory()))
+  insert_path_needed_into_correct_file(change_line_str, launch_agent_directory)
+  set_plist_permissions(launch_agent_directory)
+  stage_launch_agent(launch_agent_directory)
+  load_launch_agent
+end
+
+controller

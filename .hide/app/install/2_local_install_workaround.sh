@@ -1,4 +1,16 @@
 # !/bin/bash
+
+# Epoch/ Flip/ Clock.saver;
+# Aerial.saver;
+# Blue Screen Saver.saver;
+# FractalClock.saver;
+# KPSaver.saver;
+# MarineAquarium3.2.saver;
+# MatrixScreenSaver.saver;
+# StarWarsScroll.saver;
+# WhatColourIsIt.saver;
+# Word/ Clock.saver;
+
 if [ -d ~/Library/Screen\ Savers/Aerial.saver ] ; then
   defaults -currentHost write com.apple.screensaver modulePath -string "~/Library/Screen\ Savers/Aerial.saver"; defaults -currentHost write com.apple.screensaver moduleName -string "Aerial";defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName Aerial path ~/Library/Screen\ Savers/Aerial.saver type 0;
   osascript -e 'display notification "Installed for this user only, enjoy." with title "Success, Aerial Desktop"'

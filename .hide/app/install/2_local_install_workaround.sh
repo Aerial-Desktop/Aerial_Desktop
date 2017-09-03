@@ -9,9 +9,9 @@
   # screen_saver=StarWarsScroll.saver;
   # screen_saver=WhatColourIsIt.saver;
 # not working
-  # Blue Screen Saver.saver;
-  # Word/ Clock.saver;
-  # Epoch/ Flip/ Clock.saver;
+  # screen_saver=BlueScreenSaver.saver;
+  # screen_saver=WordClock.saver;
+  # screen_saver=EpochFlipClock.saver;
 
 if [ -d ~/Library/Screen\ Savers/$screen_saver ] ; then
   defaults -currentHost write com.apple.screensaver modulePath -string "~/Library/Screen\ Savers/$screensaver"; defaults -currentHost write com.apple.screensaver moduleName -string "Aerial";defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName Aerial path ~/Library/Screen\ Savers/Aerial.saver type 0;

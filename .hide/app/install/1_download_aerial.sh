@@ -13,10 +13,10 @@
   #svn checkout https://github.com/MichaelDimmitt/sc/trunk/WhatColourIsIt.saver;
   svn checkout https://github.com/MichaelDimmitt/sc/trunk/Word%20Clock.saver;
   screen_saver=Word\ Clock.saver/
-  say $screen_saver   
-  # mv $DIR/$screen_saver $DIR/../../bin/$screen_saver
+  say $DIR/$screen_saver   
+  mv $DIR/$screen_saver $DIR/../../bin/$screen_saver
   # mv Aerial.saver $DIR/../../bin/Aerial.saver;
-   mv Aerial.saver $DIR/../../bin/Word\ Clock.saver/;
+  #mv $DIR/Word\ Clock.saver/ $DIR/../../bin/Word\ Clock.saver/;
 # run aerial application
   if [ -d ~/Library/Screen\ Savers/$screen_saver ] || [ -d /Library/Screen\ Savers/$screen_saver ] ; then
     echo "File exists."

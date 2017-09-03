@@ -1,3 +1,4 @@
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 if [ -d ~/Library/Screen\ Savers/Aerial.saver ] ; then
   rm -rf ~/Library/Screen\ Savers/Aerial.saver/
   osascript -e 'display notification "Aerial Screensaver has been removed." with title "Aerial Desktop Uninstal Successful"'
@@ -10,3 +11,4 @@ else
   osascript -e 'display notification "File does not exist." with title "Notification: Aerial Desktop"'
 fi
   defaults -currentHost write com.apple.screensaver modulePath -string "/System/Library/Screen Savers/Random.saver"; defaults -currentHost write com.apple.screensaver moduleName -string "Random"; defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName Random path /System/Library/Screen\ Savers/Random.saver/ type 0;
+  rm -rf $DIR/../../bin/Aerial.saver/

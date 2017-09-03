@@ -13,8 +13,8 @@
   #screen_saver=MarineAquarium3.2.saver;
   #svn checkout https://github.com/MichaelDimmitt/sc/trunk/MatrixScreenSaver.saver;
   #screen_saver=MatrixScreenSaver.saver;
-  #svn checkout https://github.com/MichaelDimmitt/sc/trunk/StarWarsScroll.saver;
-  #screen_saver=StarWarsScroll.saver;
+  svn checkout https://github.com/MichaelDimmitt/sc/trunk/StarWarsScroll.saver;
+  screen_saver=StarWarsScroll.saver;
   #svn checkout https://github.com/MichaelDimmitt/sc/trunk/WhatColourIsIt.saver;
   #screen_saver=WhatColourIsIt.saver;
   #svn checkout https://github.com/MichaelDimmitt/sc/trunk/WordClock.saver;
@@ -23,8 +23,8 @@
   #screen_saver=BlueScreenSaver.saver
   
   #not working
-  svn checkout https://github.com/MichaelDimmitt/sc/trunk/EpochFlipClock.saver;
-  screen_saver=EpochFlipClock.saver
+  #svn checkout https://github.com/MichaelDimmitt/sc/trunk/EpochFlipClock.saver;
+  #screen_saver=EpochFlipClock.saver
   
   
 #  say $DIR/$screen_saver   

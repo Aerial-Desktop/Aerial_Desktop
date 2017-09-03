@@ -1,7 +1,20 @@
 
+# works
+  # screen_saver=Aerial.saver;
+  # screen_saver=FractalClock.saver;
+  # screen_saver=KPSaver.saver;
+  # screen_saver=MarineAquarium3.2.saver;
+  # screen_saver=MatrixScreenSaver.saver;
+   screen_saver=StarWarsScroll.saver;
+   saver=StarWarsScroll;
+  # screen_saver=WhatColourIsIt.saver;
+# not working
+  # screen_saver=BlueScreenSaver.saver;
+  # screen_saver=WordClock.saver;
+  # screen_saver=EpochFlipClock.saver;
 adaptive_wait () {
 TIMEOUT=25
-  until [ -d ~/Library/Screen\ Savers/Aerial.saver ] || [ -d /Library/Screen\ Savers/Aerial.saver ] || [ $TIMEOUT -eq 0 ] ; do
+  until [ -d ~/Library/Screen\ Savers/$screen_saver ] || [ -d /Library/Screen\ Savers/$screen_saver ] || [ $TIMEOUT -eq 0 ] ; do
     if ! ((TIMEOUT % 5)); then
     osascript -e 'display notification "To allow for Decision/User Credentials" with title "Application Waiting"'
     fi

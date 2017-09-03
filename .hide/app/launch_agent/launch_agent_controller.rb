@@ -1,7 +1,7 @@
 # require relative screensaver_engine.rb
 # require relative com.example.plist
 # require relative .tmp
-
+require launch_agent
 # write out path needed
 
 def get_directory()
@@ -38,13 +38,6 @@ def set_plist_permissions(launch_agent)
   `chmod 644 "#{launch_agent}/.tmp/com.example.hello.plist"`
 end
 
-def stage_launch_agent(launch_agent)
-  `cp "#{launch_agent}/.tmp/com.example.hello.plist" ~/Library/LaunchAgents/`
-end
-
-def load_launch_agent
-  `launchctl load ~/Library/LaunchAgents/com.example.hello.plist`
-end
 
 def controller()
   get_directory
@@ -55,8 +48,8 @@ def controller()
   change_line_str = create_string_for_launch_agent(get_screensaver_engine_directory(get_directory()))
   insert_path_needed_into_correct_file(change_line_str, launch_agent_directory)
   set_plist_permissions(launch_agent_directory)
-  stage_launch_agent(launch_agent_directory)
-  load_launch_agent
+  launch_agent.stage_launch_agent(launch_agent_directory)
+  launch_agent.load_launch_agent
 end
 
 controller

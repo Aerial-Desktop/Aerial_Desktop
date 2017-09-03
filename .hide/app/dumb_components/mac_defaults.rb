@@ -12,6 +12,10 @@ def change_defaults_on_local(screen_saver)
   defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName "#{screen_saver}" path "#{root_saver_path(screen_saver)}" type 0;`
 end # if local "~/" if root "/"
 
+def change_mac_default_screensaver_no_longer_exists
+  change_defaults_on_local("Random")
+end
+
 # previous example
   # defaults -currentHost write com.apple.screensaver modulePath -string "~/Library/Screen\ Savers/Aerial.saver";
   # defaults -currentHost write com.apple.screensaver moduleName -string "Aerial";

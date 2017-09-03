@@ -1,12 +1,15 @@
-`if [ -d ~/Library/Screen\ Savers/Aerial.saver ] ; then
-  rm -rf ~/Library/Screen\ Savers/Aerial.saver/
-  osascript -e 'display notification "Aerial Screensaver has been removed." with title "Aerial Desktop Uninstal Successful"'
-elif [ -d /Library/Screen\ Savers/Aerial.saver ] ; then
-  #build notes: will need to open a popup window and gather input
-  #then put it as the pasword information for sudo
-osascript -e 'display notification "Did not Uninstall currently in dev,\nReason: installed across all Users; need sudo"'
-  sudo rm -rf /Library/Screen\ Savers/Aerial.saver/
-else
+
+def notify_uninstall_success
+  osascript -e 'display notification "Aerial Screensaver has been removed." with title "Aerial Desktop Uninstall Successful"'
+end
+
+def notify_about_sudo_problem_known_bug
+  osascript -e 'display notification "Did not Uninstall currently in dev,\nReason: installed across all Users; need sudo"'
+end
+
+def notify_no_file
   osascript -e 'display notification "File does not exist." with title "Notification: Aerial Desktop"'
-fi
-  defaults -currentHost write com.apple.screensaver modulePath -string "/System/Library/Screen Savers/Shell.saver"; defaults -currentHost write com.apple.screensaver moduleName -string "Shell"; defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName Shell path /System/Library/Screen\ Savers/Shell.saver/ type 0;`
+end
+
+
+

@@ -45,7 +45,7 @@ Setting the program as your Desktop Background can be toggled after installation
 If you only want Aerial as a screensaver without the desktop change, simply open **Uninstall.app**<br>
 and you are done! The afterward uninstall steps are for removing the Aerial Screensaver.
 
-To find more information on Aerial navigate to: 
+To find more information on Aerial navigate to 
 https://github.com/JohnCoates/Aerial<br><hr>
 
 ## Note:

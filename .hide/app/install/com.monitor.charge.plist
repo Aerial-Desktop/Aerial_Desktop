@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>com.example.hello</string>
+	<string>com.monitor.charge</string>
 	<key>ProgramArguments</key>
 	<array>
 		<string>This is a test. Check if the file has been exists or has been modified in /.tmp/com.example.plist. If not, navigate to repo and run ./install_launch_agent.	
@@ -13,6 +13,6 @@
 	<key>SuccessfulExit</key>
 	<false/>
 	<key>StartInterval</key>
-	<integer>1</integer>
+	<integer>5</integer>
 </dict>
 </plist>

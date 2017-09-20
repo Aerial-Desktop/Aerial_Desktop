@@ -10,12 +10,12 @@ get_percentage(){ numerator=$(ioreg -n AppleSmartBattery | grep CurrentCapacity 
 
 # check battery to acceptance criteria.
 percentage="$(get_percentage)";
-test=.20;
+battery_threshold=.20;
 
-if (( $(echo "$percentage > $test" | bc -l) )) ; then
-  echo "$percentage greater than .20"
-elif (( $(echo "$percentage < $test" | bc -l) )) ; then
-  echo "$percentage less than .20"
+if (( $(echo "$percentage > $battery_threshold" | bc -l) )) ; then
+  echo "$percentage greater than $battery_threshold"
+elif (( $(echo "$percentage < $battery_threshold" | bc -l) )) ; then
+  echo "$percentage less than $battery_threshold"
 else 
   echo "nothing found"
 fi

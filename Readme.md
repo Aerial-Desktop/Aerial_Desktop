@@ -6,10 +6,15 @@ If you can think of a better name please let me know.
 
 Completely open source so feel free to contribute to or learn from project development.
 
+## Now supporting Battery Monitoring:
+For people with laptops.
+1) Application will only run if computer is at '20%' or 'charging' 🤓
+2) A single notification will tell the user to plug in their computer. 😘
+
 #### Most stable when installing for current user instead of across all users.
 ## Installation (no programming experience needed)
 
-1) [Click here to Download](https://github.com/MichaelDimmitt/Aerial_Desktop/releases/download/v7.1/Aerial_Desktop.zip)
+1) [Click here to Download](https://github.com/MichaelDimmitt/Aerial_Desktop/releases/download/v7.2/Aerial_Desktop.zip)
 2) Unzip the downloaded file.
 3) hold "ctrl" and Open **Installer** and confirm installation.<br>
 <b>note:</b> after installing ... program runs at startup or waking from sleep.

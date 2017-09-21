@@ -19,3 +19,4 @@ mv $shrink/.hide/bin/Start.app/     ../../../
 mv $shrink/.hide/bin/Stop.app/      ../../../
 mv $shrink/.hide/bin/Uninstall.app  ../../../
 mv $shrink/Installer.app      ../../../.hide/bin
+osascript -e 'quit app "System Preferences"'

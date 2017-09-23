@@ -33,7 +33,7 @@ if [ "$result" == "Yes" ] ; then
   $DIR/./3_install_launch_agent.sh
 elif [ "$result" == "No" ] ; then
   echo Not Charging;
-  if (( $(echo "$percentage < $test" | bc -l) )) ; then
+  if (( $(echo "$percentage < $battery_threshold" | bc -l) )) ; then
     # echo not charging and battery unacceptable level.
     # osascript -e 'display notification "Computer not charging and low battery program disabled." with title "Aerial Desktop"'
     $DIR/./../uninstall/unstage_aerial_desktop.sh

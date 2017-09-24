@@ -10,7 +10,8 @@ get_percentage(){ numerator=$(ioreg -n AppleSmartBattery | grep CurrentCapacity 
 
 # check battery to acceptance criteria.
 percentage="$(get_percentage)";
-battery_threshold=.20;
+battery_threshold=.40;
+charger_threshold=.20
 
 if (( $(echo "$percentage > $battery_threshold" | bc -l) )) ; then
   echo "$percentage greater than $battery_threshold"
@@ -30,7 +31,9 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 if [ "$result" == "Yes" ] ; then
   # echo Charging;
   # osascript -e 'display notification "Since Computer is Charging, program ok." with title "Aerial Desktop"'
-  $DIR/./3_install_launch_agent.sh
+  if (( $(echo "$percentage < $charger_threshold" | bc -l) )) ; then
+    $DIR/./3_install_launch_agent.sh
+  fi
 elif [ "$result" == "No" ] ; then
   echo Not Charging;
   if (( $(echo "$percentage < $battery_threshold" | bc -l) )) ; then

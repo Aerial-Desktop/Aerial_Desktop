@@ -1,4 +1,5 @@
 shrink=../../..
+rm $shrink/.hide/app/install/DesktopBackgroundChanger.app/Contents/Resources/.timestamp.txt
 ./$shrink/.hide/app/uninstall/unstage_launch_agent.sh
 ./$shrink/.hide/app/uninstall/remove_aerial.sh
 mv $shrink/Start.app/ ../../../.hide/bin

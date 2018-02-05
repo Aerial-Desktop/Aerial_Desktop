@@ -1,1 +1,36 @@
-  `/System/Library/Frameworks/ScreenSaver.framework/Resources/./ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background`
+#!/bin/bash
+
+# gather information to be able to run scripts from this file location.
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+# say $DIR
+# end gather information.
+
+# test_date() uninstall launch_agent if computer has slept twice quickly...
+# handling potential high sierra catestrophy
+test_date() {
+  num_lines=$(cat $DIR/.timestamp.txt | wc -l)
+  case $(echo $num_lines) in
+    [0-1])
+        date +%s >> $DIR/.timestamp.txt
+        `/System/Library/Frameworks/ScreenSaver.framework/Resources/./ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background`;
+        ;;
+    [2])
+      old_time=`cat $DIR/.timestamp.txt`;
+      count=`expr $(date +%s) - $(sed -n '2p' $DIR/.timestamp.txt)`;
+      if [ "$count" -le 100 ]; then
+        osascript -e 'display notification "Uninstalled because you put your computer to sleep twice really quickly.😍✌️" with title "Uninstalled due rapid sleep, please reinstall."'
+        say "uninstalled due to $count seconds between repeated sleeping"
+        rm $DIR/.timestamp.txt
+        launchctl unload ~/Library/LaunchAgents/com.monitor.charge.plist && launchctl unload ~/Library/LaunchAgents/com.aerial.desktop.plist
+      else
+        sed -i '' '1d' $DIR/.timestamp.txt;
+        date +%s >> $DIR/.timestamp.txt;
+        `/System/Library/Frameworks/ScreenSaver.framework/Resources/./ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background`;
+      fi
+      ;;
+    *) say "should never happen let me reset!";
+      rm $DIR/.timestamp.txt;`/System/Library/Frameworks/ScreenSaver.framework/Resources/./ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background`
+      ;;
+  esac
+}
+test_date;

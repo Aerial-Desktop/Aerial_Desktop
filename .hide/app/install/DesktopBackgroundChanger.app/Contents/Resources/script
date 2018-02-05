@@ -12,7 +12,10 @@ test_date() {
   case $(echo $num_lines) in
     [0-1])
         date +%s >> $DIR/.timestamp.txt
-        `/System/Library/Frameworks/ScreenSaver.framework/Resources/./ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background`;
+        if curl --silent --head https://github.com/michaeldimmitt/aerial_desktop;  
+          then `/System/Library/Frameworks/ScreenSaver.framework/Resources/./ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background`;# echo Internet status: OK; 
+          else osascript -e 'display notification "Please connect your computer to internet." with title "Aerial Desktop"'# echo Internet status: ERROR; 
+        fi | tail -n 1 
         ;;
     [2])
       old_time=`cat $DIR/.timestamp.txt`;
@@ -25,11 +28,18 @@ test_date() {
       else
         sed -i '' '1d' $DIR/.timestamp.txt;
         date +%s >> $DIR/.timestamp.txt;
-        `/System/Library/Frameworks/ScreenSaver.framework/Resources/./ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background`;
+        if curl --silent --head https://github.com/michaeldimmitt/aerial_desktop;  
+          then `/System/Library/Frameworks/ScreenSaver.framework/Resources/./ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background`;# echo Internet status: OK; 
+          else osascript -e 'display notification "Please connect your computer to internet." with title "Aerial Desktop"'# echo Internet status: ERROR; 
+        fi | tail -n 1 
       fi
       ;;
     *) say "should never happen let me reset!";
-      rm $DIR/.timestamp.txt;`/System/Library/Frameworks/ScreenSaver.framework/Resources/./ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background`
+      rm $DIR/.timestamp.txt;
+      if curl --silent --head https://github.com/michaeldimmitt/aerial_desktop;  
+        then `/System/Library/Frameworks/ScreenSaver.framework/Resources/./ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background`;# echo Internet status: OK; 
+        else osascript -e 'display notification "Please connect your computer to internet." with title "Aerial Desktop"'# echo Internet status: ERROR; 
+      fi | tail -n 1 
       ;;
   esac
 }

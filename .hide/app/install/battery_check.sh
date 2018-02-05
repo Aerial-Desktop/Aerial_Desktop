@@ -52,5 +52,13 @@ elif [ "$result" == "No" ] ; then
     fi | tail -n 1
   fi
 else 
-  osascript -e 'display notification " something went wrong, contact michael; did some bad programming." with title "Aerial Desktop"'
+  if [ "$(grep -c "^$1" schemas.txt)" -ge 1 ]; 
+    then osascript -e 'display notification " something went wrong, contact michael; did some bad programming." with title "Aerial Desktop"'
+    else osascript -e 'display notification " Desktop Computer not needing battery consideration." with title "Aerial Desktop activating program."';
+      if curl --silent --head https://github.com/michaeldimmitt/aerial_desktop;--
+        then $DIR/./3_install_launch_agent.sh# echo Internet status: OK;-
+        else osascript -e 'display notification "Please connect your computer to internet." with title "Aerial Desktop"'# echo Internet status: ERROR;-
+      fi | tail -n 1
+  fi
+  
 fi

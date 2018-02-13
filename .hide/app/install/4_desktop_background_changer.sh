@@ -22,9 +22,9 @@ test_date() {
       count=`expr $(date +%s) - $(sed -n '2p' $DIR/.timestamp.txt)`;
       if [ "$count" -le 100 ]; then
         osascript -e 'display notification "Uninstalled because you put your computer to sleep twice really quickly.😍✌️" with title "Uninstalled due rapid sleep, please reinstall."'
-        say "uninstalled due to $count seconds between repeated sleeping"
         rm $DIR/.timestamp.txt
-        launchctl unload ~/Library/LaunchAgents/com.monitor.charge.plist && launchctl unload ~/Library/LaunchAgents/com.aerial.desktop.plist
+        launchctl unload ~/Library/LaunchAgents/com.monitor.charge.plist && launchctl unload ~/Library/LaunchAgents/com.aerial.desktop.plist && launchctl unload ~/Library/LaunchAgents/com.dyna.desktop.plist
+        open $DIR/../../../.hide/bin/Stop.app/
       else
         sed -i '' '1d' $DIR/.timestamp.txt;
         date +%s >> $DIR/.timestamp.txt;

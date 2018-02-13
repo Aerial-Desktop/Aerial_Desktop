@@ -42,7 +42,7 @@ elif [ "$result" == "No" ] ; then
   if (( $(echo "$percentage < $battery_threshold" | bc -l) )) ; then
     # echo not charging and battery unacceptable level.
     # osascript -e 'display notification "Computer not charging and low battery program disabled." with title "Aerial Desktop"'
-    $DIR/./../uninstall/unstage_aerial_desktop.sh
+    $DIR/./../../uninstall/1_unstage_dyna_desktop.sh  
   else
     # echo but at an acceptable battery level.
     # osascript -e 'display notification "Computer not charging and but at an acceptable battery level, program ok." with title "Aerial Desktop"'

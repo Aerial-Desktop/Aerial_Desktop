@@ -23,8 +23,7 @@ test_date() {
       if [ "$count" -le 100 ]; then
         osascript -e 'display notification "Uninstalled because you put your computer to sleep twice really quickly.😍✌️" with title "Uninstalled due rapid sleep, please reinstall."'
         rm $DIR/.timestamp.txt
-        launchctl unload ~/Library/LaunchAgents/com.monitor.charge.plist && launchctl unload ~/Library/LaunchAgents/com.aerial.desktop.plist && launchctl unload ~/Library/LaunchAgents/com.dyna.desktop.plist
-        open $DIR/../../../.hide/bin/Stop.app/
+        ./$DIR/../uninstall/2_unstage_launch_agent.sh
       else
         sed -i '' '1d' $DIR/.timestamp.txt;
         date +%s >> $DIR/.timestamp.txt;

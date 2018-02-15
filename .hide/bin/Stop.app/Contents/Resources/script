@@ -1,2 +1,2 @@
-shrink=../../..
-./$shrink/.hide/app/uninstall/unstage_launch_agent.sh
+shrink=../../../..
+./$shrink/app/uninstall/2_unstage_launch_agent.sh

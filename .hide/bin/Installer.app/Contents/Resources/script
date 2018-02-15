@@ -1,0 +1,24 @@
+osascript -e 'quit app "System Preferences"'
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+screen=$1
+saver='.saver'
+adaptive_wait () {
+TIMEOUT=25
+  until [ -d ~/Library/Screen\ Savers/$screen$saver ] || [ -d /Library/Screen\ Savers/$screen$saver ] || [ $TIMEOUT -eq 0 ] ; do
+    if ! ((TIMEOUT % 5)); then
+    osascript -e 'display notification "To allow for Decision/User Credentials" with title "Application Waiting"'
+    fi
+    sleep 1
+    TIMEOUT=$[$TIMEOUT-1]
+  done
+}
+shrink="$DIR/../../../../app"
+
+$shrink/uninstall/./2_unstage_launch_agent.sh
+rm $shrink/install/.timestamp.txt 
+$shrink/install/./1_check_resource.sh $screen$saver
+adaptive_wait
+osascript -e 'quit app "System Preferences"'
+$shrink/install/./notify_and_defaults/2_local_install_workaround.sh $screen".saver"
+$shrink/install/./launch_agent/3_install_launch_agent.sh dyna
+rm -rf $screen".saver"

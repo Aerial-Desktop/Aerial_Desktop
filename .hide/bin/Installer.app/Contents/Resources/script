@@ -15,6 +15,7 @@ TIMEOUT=25
 shrink="$DIR/../../../../app"
 
 $shrink/uninstall/./2_unstage_launch_agent.sh
+rm $shrink/install/.timestamp.txt 
 $shrink/install/./1_check_resource.sh $screen$saver
 adaptive_wait
 osascript -e 'quit app "System Preferences"'

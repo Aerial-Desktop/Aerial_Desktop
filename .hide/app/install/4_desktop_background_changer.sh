@@ -17,11 +17,22 @@ check_launch_agent() {
   fi
 }
 
+check_mac_operating_system() {
+  if [ $($DIR/./0_check_version.sh $(sw_vers -productVersion) 10.12.6 '<=') = true ]; then
+    rm $DIR/.timestamp.txt 2> /dev/null; # backdoor not needed because operating system value, removing timestamp.
+    echo "product version was less than or equal to.";
+    # `/System/Library/Frameworks/ScreenSaver.framework/Resources/./ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background`;
+  else 
+    echo "high sierra present, run the screensaver engine workaround.";
+    # /System/Library/CoreServices/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -window -background 
+  fi
+}
+
 check_internet_connection() {
   if curl --silent --head https://github.com/michaeldimmitt/aerial_desktop;
     then 
       sleep 3;
-      `/System/Library/Frameworks/ScreenSaver.framework/Resources/./ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background`;
+      check_mac_operating_system
       # echo Internet status: OK; 
     else 
       check_launch_agent
@@ -44,6 +55,7 @@ test_date() {
       if [ "$count" -le 100 ]; then # less than two minutes.
         osascript -e 'display notification "Uninstalled because you put your computer to sleep twice really quickly.😍✌️" with title "Uninstalled due rapid sleep, please reinstall."'
         ./$DIR/../uninstall/2_unstage_launch_agent.sh
+        rm $DIR/.timestamp.txt 2> /dev/null; # backdoor is executed so lets remove the timestamp.
       else
         # Write current timestamp to text file
         date +%s >> $DIR/.timestamp.txt;

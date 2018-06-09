@@ -33,9 +33,8 @@ test_date() {
   num_lines=$(cat $DIR/.timestamp.txt | wc -l)
   case $(echo $num_lines) in
     [0-1])
-        # write date timestamp
+        # Write current timestamp to text file
         date +%s >> $DIR/.timestamp.txt;
-        # check the internet
         check_internet_connection;
         ;;
     2)
@@ -46,7 +45,7 @@ test_date() {
         osascript -e 'display notification "Uninstalled because you put your computer to sleep twice really quickly.😍✌️" with title "Uninstalled due rapid sleep, please reinstall."'
         ./$DIR/../uninstall/2_unstage_launch_agent.sh
       else
-        # sed -i '' '1d' $DIR/.timestamp.txt;
+        # Write current timestamp to text file
         date +%s >> $DIR/.timestamp.txt;
         check_internet_connection;
       fi

@@ -42,7 +42,7 @@ check_version () {
         1) op='>';;
         2) op='<';;
     esac
-    if [[ $3 != *"$op"* ]] # allows "<=, >="
+    if [[ $3 == *"$op"* ]] # allows "<=, >="
     then
         echo "true"
         # echo "FAIL: Expected '$3', Actual '$op', Arg1 '$1', Arg2 '$2'"

@@ -21,10 +21,12 @@ For people with laptops.
 
 ## Installation (for inquisitive programmers.)
 
-1) git clone https://github.com/MichaelDimmitt/Aerial_Desktop.git;
-2) cd Aerial_Desktop;
-3) open .hide/bin/Installer.app --args Aerial<br>
-<b>note:</b> Uninstall with "open .hide/bin/Stop.app"
+1) `git clone https://github.com/MichaelDimmitt/Aerial_Desktop.git;`
+2) `cd Aerial_Desktop;`
+3) `open .hide/bin/Installer.app` #Application will default to Aerial ScreenSaver</br> 
+4) <b>Syntax for additional screensavers.</b></br>
+`open .hide/bin/Installer.app` --args StarWarsScroll</br> 
+<b>note:</b> Uninstall with "`open .hide/bin/Stop.app`"
 
 ## Usage: 
 Setting the program as your Desktop Background can be toggled after installation with "Start.app and "Stop.app" ... implementing "Stop.app" will leave "Aerial" as your default screensaver. This app can support other Screensavers as Backgrounds. If you would like that email me at michaelgdimmitt@gmail.com or open an issue.

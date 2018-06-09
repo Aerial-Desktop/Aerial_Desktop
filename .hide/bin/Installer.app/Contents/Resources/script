@@ -1,6 +1,11 @@
+#!/bin/bash
 osascript -e 'quit app "System Preferences"'
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-screen=$1
+if [ $# -eq 0 ]; then
+  screen=Aerial
+else 
+  screen=$1
+fi
 saver='.saver'
 adaptive_wait () {
 TIMEOUT=25

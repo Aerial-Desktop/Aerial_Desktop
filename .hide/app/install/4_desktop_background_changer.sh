@@ -19,12 +19,12 @@ check_launch_agent() {
 
 check_mac_operating_system() {
   if [ $($DIR/./0_check_version.sh $(sw_vers -productVersion) 10.12.6 '<=') = true ]; then
+    # echo "product version was less than high sierra we are good, engines on 🤖  fullscale implementation 🚀.";
     rm $DIR/.timestamp.txt 2> /dev/null; # backdoor not needed because operating system value, removing timestamp.
-    echo "product version was less than or equal to.";
-    # `/System/Library/Frameworks/ScreenSaver.framework/Resources/./ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background`;
+    `/System/Library/Frameworks/ScreenSaver.framework/Resources/./ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background`;
   else 
-    echo "high sierra present, run the screensaver engine workaround.";
-    # /System/Library/CoreServices/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -window -background 
+    # echo "high sierra present, run the screensaver engine workaround.";
+    `/System/Library/CoreServices/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -window -background`;
   fi
 }
 

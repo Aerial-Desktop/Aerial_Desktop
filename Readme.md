@@ -14,7 +14,7 @@ For people with laptops.
 #### Most stable when installing for current user instead of across all users.
 ## Installation (no programming experience needed)
 
-1) [Click here to Download](https://github.com/MichaelDimmitt/Aerial_Desktop/releases/download/v8.0/Aerial_Desktop.zip)
+1) [Click here to Download Menubar Application](https://github.com/MichaelDimmitt/Aerial_Desktop/releases/download/v8.0/Aerial_Desktop.zip), otherwise, [Click here to Download NonMenubar Application](https://github.com/MichaelDimmitt/Aerial_Desktop/releases/download/v8.0/Aerial_Desktop.zip)
 2) Unzip the downloaded file.
 3) hold "ctrl" and Open **Installer** and confirm installation.<br>
 <b>note:</b> after installing ... program runs at startup or waking from sleep.
@@ -23,8 +23,9 @@ For people with laptops.
 
 1) git clone https://github.com/MichaelDimmitt/Aerial_Desktop.git;
 2) cd Aerial_Desktop;
-3) open Installer.app;<br>
-<b>note:</b> Uninstall with "open Uninstall.app"
+3) **Menubar:** `open Installer.app --args menu aerial;`
+<br/>**NonMenuBar:** `open Installer.app --args nonmenu aerial;`
+4) <b>note:</b> Uninstall with "open Uninstall.app"
 
 ## Usage: 
 Setting the program as your Desktop Background can be toggled after installation with "Start.app and "Stop.app" ... implementing "Stop.app" will leave "Aerial" as your default screensaver. This app can support other Screensavers as Backgrounds. If you would like that email me at michaelgdimmitt@gmail.com or open an issue.

@@ -3,7 +3,7 @@
 ## THE NPM install ! 
 ```bash
 npm install aerial_desktop
-npm run client
+npx run client
 ```
 ## License
 [MIT License](https://raw.githubusercontent.com/MichaelDimmitt/ScreenSaver_to_DesktopBackground_mac/master/LICENSE)

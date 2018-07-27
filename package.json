@@ -1,13 +1,13 @@
 {
   "name": "aerial_desktop",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "![screencast](https://cloud.githubusercontent.com/assets/499192/10754100/c0e1cc4c-7c95-11e5-9d3b-842d3acc2fd5.gif)",
   "main": "node_modules/dyna-dynamic-walpaper.package.json",
   "scripts": {
-    "client": "cd node_modules/dyna-dynamic-walpaper; npm install; npm run dyna"
+    "client": "npm install dyna-dynamic-wallpaper; cd node_modules/dyna-dynamic-walpaper; npm install; npm run dyna"
   },
   "bin": {
-    "gulp": "bin/client.js"
+    "client": "npm install dyna-dynamic-wallpaper; cd node_modules/dyna-dynamic-walpaper; npm install; npm run dyna"
   },
   "repository": {
     "type": "git",

@@ -6,8 +6,9 @@
   "scripts": {
     "client": "npm install dyna-dynamic-wallpaper; cd node_modules/dyna-dynamic-walpaper; npm install; npm run dyna"
   },
+  "dependencies" : { "dyna-dynamic-wallpaper" : "0.1.x" },
   "bin": {
-    "client": "npm install dyna-dynamic-wallpaper; cd node_modules/dyna-dynamic-walpaper; npm install; npm run dyna"
+    "gulp": "bin/client.js"
   },
   "repository": {
     "type": "git",

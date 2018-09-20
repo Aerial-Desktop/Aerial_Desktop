@@ -14,7 +14,7 @@ For people with laptops.
 #### Most stable when installing for current user instead of across all users.
 ## Installation (no programming experience needed)
 
-1) [Click here to Download](https://github.com/MichaelDimmitt/Aerial_Desktop/releases/download/v9/Aerial_Desktop.zip)
+1) [Click here to Download](https://github.com/MichaelDimmitt/Aerial_Desktop/releases/download/v9.1/Aerial_Desktop.zip)
 2) Unzip the downloaded file.
 3) hold "ctrl" and Open **Installer** and confirm installation.<br>
 <b>note:</b> after installing ... program runs at startup or waking from sleep.

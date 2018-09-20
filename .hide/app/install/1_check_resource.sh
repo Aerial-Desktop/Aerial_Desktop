@@ -10,6 +10,5 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
   then 
     open /Library/Screen\ Savers/$screensaver 
   else
-    svn checkout https://github.com/MichaelDimmitt/sc/trunk/$screensaver;
-    open $screensaver
+    open $DIR/../../bin/$screensaver
   fi

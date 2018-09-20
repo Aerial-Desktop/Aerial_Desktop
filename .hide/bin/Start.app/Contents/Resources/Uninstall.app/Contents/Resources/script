@@ -1,0 +1,8 @@
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+shrink="$DIR/../../.."
+
+echo $shrink
+$shrink/.hide/app/uninstall/./2_unstage_launch_agent.sh
+mv $shrink/.hide/bin/Installer.app .
+mv $shrink/Uninstall.app $shrink/.hide/bin/
+

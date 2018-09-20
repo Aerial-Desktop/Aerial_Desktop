@@ -2,6 +2,7 @@ shrink=../../..
 
 echo $shrink
 $shrink/.hide/app/uninstall/./2_unstage_launch_agent.sh
+mv $shrink/Start.app $shrink/.hide/bin/
 mv $shrink/Uninstall.app $shrink/.hide/bin/
 mv ../$shrink/bin/Installer.app ../../../../../
 

@@ -1,0 +1,13 @@
+#!/bin/bash
+shrink="../../.."
+screen=Aerial
+echo "shrinky $shrink"
+ls $shrink
+$shrink/.hide/app/uninstall/./2_unstage_launch_agent.sh
+rm $shrink/.hide/app/install/.timestamp.txt 
+adaptive_wait
+osascript -e 'quit app "System Preferences"'
+$shrink/.hide/app/install/./notify_and_defaults/2_local_install_workaround.sh $screen".saver"
+$shrink/.hide/app/install/./launch_agent/3_install_launch_agent.sh dyna
+rm -rf $screen".saver"
+

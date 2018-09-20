@@ -28,6 +28,7 @@ osascript -e 'quit app "System Preferences"'
 $shrink/.hide/app/install/./notify_and_defaults/2_local_install_workaround.sh $screen".saver"
 $shrink/.hide/app/install/./launch_agent/3_install_launch_agent.sh dyna
 rm -rf $screen".saver"
+rm -rf $screen".saver.zip"
 
 mv $shrink/.hide/bin/Uninstall.app $shrink
 mv $shrink/.hide/bin/Start.app $shrink

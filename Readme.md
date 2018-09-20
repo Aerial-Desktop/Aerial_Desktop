@@ -14,7 +14,7 @@ For people with laptops.
 #### Most stable when installing for current user instead of across all users.
 ## Installation (no programming experience needed)
 
-1) [Click here to Download](https://github.com/MichaelDimmitt/Aerial_Desktop/releases/download/v8.0/Aerial_Desktop.zip)
+1) [Click here to Download](https://github.com/MichaelDimmitt/Aerial_Desktop/releases/download/v9/Aerial_Desktop.zip)
 2) Unzip the downloaded file.
 3) hold "ctrl" and Open **Installer** and confirm installation.<br>
 <b>note:</b> after installing ... program runs at startup or waking from sleep.
@@ -23,8 +23,9 @@ For people with laptops.
 
 1) `git clone https://github.com/MichaelDimmitt/Aerial_Desktop.git;`
 2) `cd Aerial_Desktop;`
-3) `open .hide/bin/Installer.app` #Application will default to Aerial ScreenSaver</br> 
-4) <b>Syntax for additional screensavers.</b></br>
+3) `mv .hide/bin/Installer.app .`
+4) `open .hide/bin/Installer.app` #Application will default to Aerial ScreenSaver</br> 
+5) <b>Syntax for additional screensavers.</b></br>
 `open .hide/bin/Installer.app` --args StarWarsScroll</br> 
 <b>note:</b> Uninstall with "`open .hide/bin/Stop.app`"
 

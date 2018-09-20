@@ -17,9 +17,9 @@ TIMEOUT=25
     TIMEOUT=$[$TIMEOUT-1]
   done
 }
-shrink="../../.."
-echo "shrinky $shrink"
-ls $shrink
+shrink="$DIR/../../.."
+
+echo $shrink
 $shrink/.hide/app/uninstall/./2_unstage_launch_agent.sh
 rm $shrink/.hide/app/install/.timestamp.txt 
 $shrink/.hide/app/install/./1_check_resource.sh $screen$saver
@@ -27,7 +27,6 @@ adaptive_wait
 osascript -e 'quit app "System Preferences"'
 $shrink/.hide/app/install/./notify_and_defaults/2_local_install_workaround.sh $screen".saver"
 $shrink/.hide/app/install/./launch_agent/3_install_launch_agent.sh dyna
-rm -rf $screen".saver"
-
-mv $shrink/.hide/bin/Uninstall.app $shrink
-mv $shrink/Installer.app $shrink/.hide/bin/
+rm -rf $shrink/.hide/bin/$screen".saver"
+mv $shrink/.hide/bin/Uninstall.app  $shrink
+mv $shrink/Installer.app      ../../../.hide/bin

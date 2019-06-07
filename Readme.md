@@ -1,3 +1,9 @@
+(NOTE) This project is no longer being maintained. Apple changed window management since HighSierra OS.
+
+If your operating system is HighSierra or newer install instructions should default to a deprecated version.
+
+If your operating system is Sierra or lower install instructions will provide the full experience.
+
 ![screencast](https://cloud.githubusercontent.com/assets/499192/10754100/c0e1cc4c-7c95-11e5-9d3b-842d3acc2fd5.gif)
 
 # Screen Saver to Desktop Background on Startup

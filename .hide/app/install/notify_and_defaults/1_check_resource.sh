@@ -10,8 +10,6 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
   then 
     open /Library/Screen\ Savers/$screensaver 
   else
-    curl -L -O https://github.com/MichaelDimmitt/sc/blob/zip/$screensaver.zip?raw=true
-    mv $screensaver.zip* $screensaver.zip
-    unzip $screensaver.zip 
+    svn checkout https://github.com/MichaelDimmitt/sc/trunk/$screensaver;
     open $screensaver
   fi

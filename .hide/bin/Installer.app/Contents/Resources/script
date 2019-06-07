@@ -1,6 +1,11 @@
+#!/bin/bash
 osascript -e 'quit app "System Preferences"'
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-screen=$1
+if [ $# -eq 0 ]; then
+  screen=Aerial
+else 
+  screen=$1
+fi
 saver='.saver'
 adaptive_wait () {
 TIMEOUT=25
@@ -22,3 +27,4 @@ osascript -e 'quit app "System Preferences"'
 $shrink/install/./notify_and_defaults/2_local_install_workaround.sh $screen".saver"
 $shrink/install/./launch_agent/3_install_launch_agent.sh dyna
 rm -rf $screen".saver"
+rm -rf $screen".saver.zip"

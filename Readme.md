@@ -34,6 +34,8 @@ For people with laptops.
 `open .hide/bin/Installer.app` --args StarWarsScroll</br> 
 <b>note:</b> Uninstall with "`open .hide/bin/Stop.app`"
 
+Making a change.
+
 ## Usage: 
 Setting the program as your Desktop Background can be toggled after installation with "Start.app and "Stop.app" ... implementing "Stop.app" will leave "Aerial" as your default screensaver. This app can support other Screensavers as Backgrounds. If you would like that email me at michaelgdimmitt@gmail.com or open an issue.
 
